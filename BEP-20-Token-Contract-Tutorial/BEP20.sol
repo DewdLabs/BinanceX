@@ -22,11 +22,11 @@ contract BEP20 is ERC20 {
   }
   
   function balanceOf(address account) external view returns (uint256){
-    //implement me!
+    //TODO
   }
   
   function transfer(address recipient, uint256 amount) external returns (bool){
-    //implement me!
+    //TODO
   }
   
   function allowance(address owner, address spender) external view returns (uint256){
@@ -38,6 +38,23 @@ contract BEP20 is ERC20 {
   }
   
   function transferFrom(address sender, address recipient, uint256 amount) external returns (bool){
+    //TODO
+  }
+  
+  //BEP20 standard exclusive functions are the following
+  
+  //Returns the name of the token - e.g. "MyToken"
+  function name() public view returns (string){
+    //TODO
+  }
+  
+  //Returns the symbol of the token. E.g. “HIX”.
+  function symbol() public view returns (string){
+    //TODO
+  }
+  
+  //Returns the number of decimals the token uses
+  function decimals() public view returns (uint8){
     //TODO
   }
 }
