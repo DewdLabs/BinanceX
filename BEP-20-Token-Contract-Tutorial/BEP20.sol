@@ -14,5 +14,30 @@ interface ERC20 {
 
 //The BEP20 standard shares the same 6 functions from ERC20
 contract BEP20 is ERC20 {
-  //implement BEP20 here
+    
+  mapping (address => uint) balances;
+  
+  function totalSupply() external view returns (uint256){
+    //TODO
+  }
+  
+  function balanceOf(address account) external view returns (uint256){
+    //implement me!
+  }
+  
+  function transfer(address recipient, uint256 amount) external returns (bool){
+    //implement me!
+  }
+  
+  function allowance(address owner, address spender) external view returns (uint256){
+    //TODO
+  }
+  
+  function approve(address spender, uint256 value) external returns (bool){
+    //TODO
+  }
+  
+  function transferFrom(address sender, address recipient, uint256 amount) external returns (bool){
+    //TODO
+  }
 }
