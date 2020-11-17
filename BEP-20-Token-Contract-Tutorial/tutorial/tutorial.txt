@@ -1,0 +1,9 @@
+This tutorial will walk you through the creation of of BEP-20 smartcontract....
+
+What is a BEP-20 Smartcontract:
+
+How to make one:
+
+  - Outline of each function needed for implementation
+
+Where can it be deployed?:
