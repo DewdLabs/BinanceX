@@ -1,0 +1,21 @@
+This post will be explaining how to make your first BEP-20 token for the Binance Blockchain. I'll go over how I implement BEP20 essentially using the same function introduced in ERC20.
+
+The Binance Blockchain....,
+
+What is BEP-20, how does it work....,
+
+[insert pic]
+
+How to set the NAME...,
+
+[insert pic]
+
+How to set the SYMBOL...,
+
+[insert pic]
+
+How to set the DECIMAL...,
+
+[insert pic]
+
+Inclusion, BEP20 extends the ERC20 standard to...,
