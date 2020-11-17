@@ -1,0 +1,1 @@
+In this post I'll cover how I wrote an Inheritance smartcontract for the Binance Blockchain 
