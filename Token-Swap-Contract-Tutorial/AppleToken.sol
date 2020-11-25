@@ -18,7 +18,9 @@ contract AppleToken is BEP20 {
     
   mapping (address => uint) balances;
   
-  uint256 cap = 500000;
+  mapping(address => mapping (address => uint256)) allowed;
+  
+  uint256 cap = 100;
   
   function totalSupply() external view returns (uint256){
       return cap;
@@ -36,8 +38,8 @@ contract AppleToken is BEP20 {
       return true;
   }
   
-  function allowance(address owner, address spender) external view returns (uint256){
-    //TODO
+  function allowance(address owner, address delegate) external view returns (uint256){
+    return allowed[owner][delegate];
   }
   
   function approve(address spender, uint256 value) external returns (bool){
