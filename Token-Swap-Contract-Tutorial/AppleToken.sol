@@ -21,15 +21,19 @@ contract AppleToken is BEP20 {
   uint256 cap = 500000;
   
   function totalSupply() external view returns (uint256){
-    return cap;
+      return cap;
   }
   
   function balanceOf(address account_address) external view returns (uint256){
-    return balances[account_address];
+      return balances[account_address];
   }
   
   function transfer(address recipient, uint256 amount) external returns (bool){
-    //TODO
+      require(amount <= balances[msg.sender]);//Handle insuficient balance
+      balances[msg.sender] = balances[msg.sender] - amount;
+      balances[recipient] = balances[recipient] + amount;
+      emit Transfer(msg.sender, recipient, amount);
+      return true;
   }
   
   function allowance(address owner, address spender) external view returns (uint256){
