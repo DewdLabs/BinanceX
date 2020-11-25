@@ -44,12 +44,20 @@ contract AppleToken is BEP20 {
   
   function approve(address delegate, uint256 amount) external returns (bool){
     allowed[msg.sender][delegate] = amount;
-    Approval(msg.sender, delegate, numTokens);
+    emit Approval(msg.sender, delegate, amount);
     return true;
   }
   
   function transferFrom(address sender, address recipient, uint256 amount) external returns (bool){
-    //TODO
+    //Check to make sure you dont send more than you have
+    require(amount <= balances[sender]);    
+    require(amount <= allowed[sender][msg.sender]);
+    
+    balances[sender] = balances[sender] - amount;
+    allowed[sender][msg.sender] = allowed[sender][msg.sender] - amount;
+    balances[recipient] = balances[recipient] + amount;
+    emit Transfer(sender, recipient, amount);
+    return true;
   }
   
   //Returns the name of the token - e.g. "MyToken"
