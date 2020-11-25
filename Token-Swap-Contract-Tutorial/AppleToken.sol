@@ -18,8 +18,10 @@ contract AppleToken is BEP20 {
     
   mapping (address => uint) balances;
   
+  uint256 totalSupply = 500000;
+  
   function totalSupply() external view returns (uint256){
-    //TODO
+    return totalSupply;
   }
   
   function balanceOf(address account) external view returns (uint256){
