@@ -21,6 +21,9 @@ contract AppleToken is BEP20 {
   mapping(address => mapping (address => uint256)) allowed;
   
   uint256 cap = 100;
+  uint8 dec = 5;
+  string sym = "APLT";
+  string nm = "Apple Token";
   
   function totalSupply() external view returns (uint256){
       return cap;
@@ -61,17 +64,17 @@ contract AppleToken is BEP20 {
   }
   
   //Returns the name of the token - e.g. "MyToken"
-  function name() external returns (string  memory){
-    //TODO
+  function name() external view returns (string  memory){
+    return nm;
   }
   
   //Returns the symbol of the token. E.g. “HIX”.
-  function symbol() external returns (string  memory){
-    //TODO
+  function symbol() external view returns (string  memory){
+    return sym;
   }
   
   //Returns the number of decimals the token uses
-  function decimals() external returns (uint8){
-    //TODO
+  function decimals() external view returns (uint8){
+    return dec;
   }
 }
