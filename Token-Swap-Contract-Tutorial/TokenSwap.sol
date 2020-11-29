@@ -10,11 +10,11 @@ contract TokenSwap{
     address public orangeOwner;
     
     function swap(uint amount, uint amount) public{
-        AppleToken.transferFrom(msg.sender, address(this), amount);
+        AppleToken.transferFrom(msg.sender, address(this), amount);        
         
-        
-        
-        //Call transfer for orangesToken
-        //TODO
+        uint256 fee = amount / 100;
+        uint256 amountb = amount - fee;
+
+        OrangeToken.transfer(msg.sender, amountb);
     }    
 }
