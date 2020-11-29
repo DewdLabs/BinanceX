@@ -10,17 +10,11 @@ contract TokenSwap{
     address public orangeOwner;
     
     function swap(uint amount, uint amount) public{
-        //verify address and balance
-        //TODO
+        AppleToken.transferFrom(msg.sender, address(this), amount);
         
-        //Call transfer for appleToken
-        //TODO
+        
         
         //Call transfer for orangesToken
         //TODO
-    }
-    
-    function transfer(BEP20 token, address sender, address recipient, uint amount) private {
-       //TODO
-    }
+    }    
 }
