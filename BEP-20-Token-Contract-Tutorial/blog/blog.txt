@@ -1,6 +1,6 @@
 This post will be explaining how to make your first BEP-20 token for the Binance Blockchain. I'll go over how I implement BEP20 essentially using the same function introduced in ERC20.
 
-The Binance Blockchain....,
+The Binance Blockchain supports the Binance DEX which powers the Binance trading platform, allowing user to exchange crypto assest.
 
 What is BEP-20, how does it work....,
 
